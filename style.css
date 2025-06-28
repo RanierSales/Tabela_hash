@@ -1,0 +1,44 @@
+
+button {
+    background-color: #1F3473;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #F2CB05;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center; /* Centraliza todo conteúdo dentro do container */
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+.logo-centered {
+  height: 80px; /* Ajuste o tamanho da logo aqui */
+  width: auto;
+  display: inline-block; /* Garante que a imagem se comporte como um bloco inline para centralização */
+}
+
