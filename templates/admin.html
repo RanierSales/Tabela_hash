@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Painel do Administrador</h2>
+<form method="post">
+    <label>Ação:</label>
+    <select name="acao" required onchange="toggleCampos(this.value)">
+        <option value="buscar">Buscar</option>
+        <option value="inserir">Inserir/Atualizar</option>
+        <option value="remover">Remover</option>
+        <option value="listar">Listar Todos</option>
+    </select>
+
+    <div id="codigoCampo">
+        <label>Código do pedido:</label>
+        <input type="text" name="codigo">
+    </div>
+
+    <div id="statusCampo" style="display:none">
+        <label>Status (0 a 3):</label>
+        <input type="number" name="status" min="0" max="3">
+    </div>
+
+    <button type="submit">Executar</button>
+</form>
+
+<script>
+function toggleCampos(acao) {
+    document.getElementById("codigoCampo").style.display = (acao === "listar") ? "none" : "block";
+    document.getElementById("statusCampo").style.display = (acao === "inserir") ? "block" : "none";
+}
+</script>
+
+{% if resultado %}
+    <h3>Resultado:</h3>
+    <pre>{{ resultado }}</pre>
+{% endif %}
+
+<a href="{{ url_for('index') }}"><button>Voltar</button></a>
+{% endblock %}

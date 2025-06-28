@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Quem é você?</h2>
+<a href="{{ url_for('admin') }}"><button>Administrador</button></a>
+<a href="{{ url_for('usuario') }}"><button>Usuário</button></a>
+{% endblock %}
