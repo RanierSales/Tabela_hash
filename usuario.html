@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Consulta de Pedido (Usuário)</h2>
+<form method="post">
+    <label>Código do pedido:</label>
+    <input type="text" name="codigo" required>
+    <button type="submit">Buscar</button>
+</form>
+
+{% if resultado %}
+    <h3>Resultado:</h3>
+    <pre>{{ resultado }}</pre>
+{% endif %}
+
+<a href="{{ url_for('index') }}"><button>Voltar</button></a>
+{% endblock %}
